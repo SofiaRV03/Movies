@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Formulario de Consulta de Películas en Movix">
+    
+    <link rel="stylesheet" href="../css/estilos.css"><meta name="description" content="Formulario de Consulta de Películas en Movix">
     <title>Movix | Formulario</title>
 </head>
 <body>
@@ -24,14 +25,13 @@
         <section aria-labelledby="tit-consulta">
             <h2 id="tit-consulta">Formulario de Consulta de Películas</h2>
             <p>Busca películas por el nombre.</p>
+            
             <form>
+            <div class="form-group">
                 <label for="nombre"><strong>Nombre de la Película:</strong></label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ej: Interstellar" required
-                    aria-label="Ingresa el nombre de la película">
-
-                <button type="submit" aria-label="Enviar consulta al sistema Movix">
-                    Enviar Consulta
-                </button>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Interstellar" required>
+            </div>
+            <button type="submit">Enviar Consulta</button>
             </form>
 
             <hr>
@@ -41,7 +41,7 @@
             <figure>
                     <video
                         controls
-                        width="640"
+                        width="100%"
                         preload="metadata"
                         aria-label="Tráiler oficial de Interstellar (2014)">
                         <source src="../assets/InterstellarTrailer.mp4" type="video/mp4">

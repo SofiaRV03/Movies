@@ -408,3 +408,29 @@ form button[type="submit"]:active {
   table { font-size: 0.82rem; }
   th, td { padding: 0.5rem 0.6rem; }
 }
+
+
+#tabla-peliculas {
+  scroll-margin-top: 40vh;
+}
+
+#tabla-generos {
+  scroll-margin-top: 40vh;
+}
+
+#tabla-peliculas-generos {
+  scroll-margin-top: 40vh;
+}
+
+#tabla-personas {
+  scroll-margin-top: 40vh;
+}
+
+#tabla-peliculas-cast {
+  scroll-margin-top: 40vh;
+}
+
+#tabla-peliculas-directores {
+  scroll-margin-top: 40vh;
+}
+

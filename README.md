@@ -101,4 +101,4 @@ Proyecto desarrollado por estudiantes de **6.° Semestre**:
 **Fuente de datos:** [IMDB — Página Oficial](https://www.imdb.com/es/)
 
 ---
-*Movix © 2026 — Programación Web
+*Movix © 2026 — Programación Web*

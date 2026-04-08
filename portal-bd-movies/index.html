@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MOVIX — Sistema de gestión de información cinematográfica que permite registrar, consultar y analizar datos de películas">
+    <meta name="keywords" content="base de datos, movies, peliculas, IMDB">
+    <meta name="author" content="Sofia Restrepo, Claudia Patricia Galvis, Allison Mariana Restrepo — 6.° Semestre">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Movix — Gestión Cinematográfica</title>
+</head>
+<body>
+
+    <header>
+            <h1>Movix</h1>
+            <p>Sistema de Gestión de Bases de Datos Cinematográficas</p>
+    </header>
+
+    <nav aria-label="Menú Principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tablas.html">Base de Datos</a></li>
+            <li><a href="formulario.html">Consultas</a></li>
+        </ul>
+        <hr>
+    </nav>
+
+    <main>
+
+        <section aria-labelledby="bienvenida-titulo">
+            <h2 id="bienvenida-titulo">Bienvenido a Movix</h2>
+            <p>Explora y gestiona información sobre películas, actores, directores y géneros cinematográficos.</p>
+            <hr>
+        </section>
+
+        <section aria-labelledby="que-es-titulo">
+            <h2 id="que-es-titulo">¿Qué es Movix?</h2>
+            <p>
+                <strong>Movix</strong> es una plataforma para administrar información cinematográfica,
+                permitiendo registrar, consultar y analizar datos de películas, actores, directores y géneros.
+            </p>
+
+            <dl>
+                <dt><strong>Inicio de operaciones:</strong></dt>
+                <dd><time datetime="2026-03-18">18 de marzo de 2026</time></dd>
+
+                <dt><strong>Recomendado para:</strong></dt>
+                <dd><mark>Amantes del cine y la gestión de datos</mark></dd>
+            </dl>
+
+            <hr>
+        </section>
+
+        <section aria-labelledby="modulos-titulo">
+            <h2 id="modulos-titulo">Módulos del Sistema</h2>
+
+            <details>
+                <summary><strong>Consulta de Películas</strong></summary>
+                <p>Permite consultar información detallada sobre películas,
+                    incluyendo título, director, actores, género y calificación según IMDB.</p>
+                <p><strong>Tablas relacionadas:</strong></p>
+                <ul>
+                    <li><code>tbl_peliculas</code></li>
+                    <li><code>tbl_actores</code></li>
+                    <li><code>tbl_directores</code></li>
+                    <li><code>tbl_generos</code></li>
+                </ul>
+            </details>
+
+            <details>
+                <summary><strong>WatchList</strong></summary>
+                <p>Permite a los usuarios agregar películas a una lista de seguimiento personalizada.</p>
+                <p><strong>Tablas relacionadas:</strong></p>
+                <ul>
+                    <li><code>tbl_watchlist</code></li>
+                </ul>
+            </details>
+
+            <details>
+                <summary><strong>Registrar Película</strong></summary>
+                <p>Permite al administrador agregar películas al catálogo del sistema.</p>
+                <p><strong>Tablas relacionadas:</strong></p>
+                <ul>
+                    <li><code>tbl_peliculas</code></li>
+                    <li><code>tbl_actores</code></li>
+                    <li><code>tbl_directores</code></li>
+                    <li><code>tbl_generos</code></li>
+                </ul>
+            </details>
+
+            <details>
+                <summary><strong>Dashboard</strong></summary>
+                <p>Permite al usuario visualizar estadísticas y métricas sobre el catálogo de películas.</p>
+                <p><strong>Tablas relacionadas:</strong></p>
+                <ul>
+                    <li><code>tbl_peliculas</code></li>
+                    <li><code>tbl_actores</code></li>
+                    <li><code>tbl_directores</code></li>
+                    <li><code>tbl_generos</code></li>
+                </ul>
+            </details>
+
+            <details>
+                <summary><strong>¿Qué película ver hoy?</strong></summary>
+                <p>Permite al usuario ver recomendaciones basadas en sus preferencias de género, director y actor.</p>
+                <p><strong>Tablas relacionadas:</strong></p>
+                <ul>
+                    <li><code>tbl_peliculas</code></li>
+                    <li><code>tbl_actores</code></li>
+                    <li><code>tbl_directores</code></li>
+                    <li><code>tbl_generos</code></li>
+                </ul>
+            </details>
+
+            <hr>
+        </section>
+
+        <section aria-labelledby="tablas-titulo">
+            <h2 id="tablas-titulo">Resumen de Tablas del Sistema</h2>
+            <table border="1">
+                <caption>Tablas de la base de datos Movix y los módulos que las utilizan</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Tabla</th>
+                        <th scope="col">Módulos que la usan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>tbl_peliculas</code></td>
+                        <td>Consulta, Registrar, Dashboard, Recomendaciones</td>
+                    </tr>
+                    <tr>
+                        <td><code>tbl_actores</code></td>
+                        <td>Consulta, Registrar, Dashboard, Recomendaciones</td>
+                    </tr>
+                    <tr>
+                        <td><code>tbl_directores</code></td>
+                        <td>Consulta, Registrar, Dashboard, Recomendaciones</td>
+                    </tr>
+                    <tr>
+                        <td><code>tbl_generos</code></td>
+                        <td>Consulta, Registrar, Dashboard, Recomendaciones</td>
+                    </tr>
+                    <tr>
+                        <td><code>tbl_watchlist</code></td>
+                        <td>WatchList</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <hr>
+        <p>
+            <strong>Fuente de datos:</strong>
+            <a href="https://www.imdb.com/es/" target="_blank">
+                IMDB — Página Oficial
+            </a>
+        </p>
+        <address>
+            <strong>Soporte:</strong> soporte@movix.co
+        </address>
+        <p><small>Movix &copy; 2026 — Sofia Restrepo, Claudia Patricia Galvis, Allison Mariana Restrepo &mdash; 6.° Semestre</small></p>
+    </footer>
+
+</body>
+</html>

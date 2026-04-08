@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de Consulta de Películas en Movix">
+    <title>Movix | Formulario</title>
+</head>
+<body>
+    <header>
+            <h1>Movix</h1>
+            <p>Sistema de Gestión de Bases de Datos Cinematográficas</p>
+        <hr>
+    </header>
+    <nav aria-label="Menú Principal">
+        <ul>
+            <li><a href='index.html'>Inicio</a></li>
+            <li><a href='tablas.html'>Base de Datos</a></li>
+            <li><a href='formulario.html'>Consultas</a></li>
+        </ul>
+        <hr>
+    </nav>
+    <main>
+        <section aria-labelledby="tit-consulta">
+            <h2 id="tit-consulta">Formulario de Consulta de Películas</h2>
+            <p>Busca películas por el nombre.</p>
+            <form>
+                <label for="nombre"><strong>Nombre de la Película:</strong></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Interstellar" required
+                    aria-label="Ingresa el nombre de la película">
+
+                <button type="submit" aria-label="Enviar consulta al sistema Movix">
+                    Enviar Consulta
+                </button>
+            </form>
+
+            <hr>
+        </section>
+        <section aria-labelledby="tit-trailer">
+            <h2 id="tit-trailer">Trailer de Interstellar</h2>
+            <figure>
+                    <video
+                        controls
+                        width="640"
+                        preload="metadata"
+                        aria-label="Tráiler oficial de Interstellar (2014)">
+                        <source src="../assets/InterstellarTrailer.mp4" type="video/mp4">
+                        <p>
+                            Tu navegador no soporta video HTML5.
+                            <a href="../assets/InterstellarTrailer.mp4">Descargar el tráiler</a>.
+                        </p>
+                    </video>
+                    <figcaption>
+                        <strong>Interstellar</strong> (2014) — Dir. Christopher Nolan.<br>
+                        <em>Tráiler oficial. Fuente: catálogo Movix.</em>
+                    </figcaption>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <p>
+            <strong>Fuente de datos:</strong>
+            <a href="https://www.imdb.com/es/" target="_blank">
+                IMDB — Página Oficial
+            </a>
+        </p>
+        <address>
+            <strong>Soporte:</strong> soporte@movix.co
+        </address>
+        <p><small>Movix &copy; 2026 — Sofia Restrepo, Claudia Patricia Galvis, Allison Mariana Restrepo &mdash; 6.° Semestre</small></p>
+    </footer>
+
+</body>
+</html>

@@ -400,6 +400,34 @@ form button[type="submit"]:active {
   border-color: var(--gold-light);
 }
 
+
+
+#tabla-peliculas {
+  scroll-margin-top: 40vh;
+}
+
+#tabla-generos {
+  scroll-margin-top: 40vh;
+}
+
+#tabla-peliculas-generos {
+  scroll-margin-top: 40vh;
+}
+
+#tabla-personas {
+  scroll-margin-top: 40vh;
+}
+
+#tabla-peliculas-cast {
+  scroll-margin-top: 40vh;
+}
+
+#tabla-peliculas-directores {
+  scroll-margin-top: 40vh;
+}
+
+
+
 @media (min-width: 768px) {
 
   /* Nav — horizontal y compacto */
@@ -412,7 +440,6 @@ form button[type="submit"]:active {
     padding: 3rem 3rem;
   }
 
-<<<<<<< HEAD
   /* Form — horizontal en pantallas medianas */
   form {
     flex-direction: row;
@@ -453,11 +480,10 @@ form button[type="submit"]:active {
 
 @media (max-width: 767px) {
 
-  /* Body — Posicion de navbar */
   body {
     padding-top: var(--nav-height-2);
   }
-  
+
   /* Header — menos padding */
   header {
     padding: 2rem 1rem 1.5rem;
@@ -534,34 +560,3 @@ form button[type="submit"]:active {
   }
 
 }
-=======
-  table { font-size: 0.82rem; }
-  th, td { padding: 0.5rem 0.6rem; }
-}
-
-
-#tabla-peliculas {
-  scroll-margin-top: 40vh;
-}
-
-#tabla-generos {
-  scroll-margin-top: 40vh;
-}
-
-#tabla-peliculas-generos {
-  scroll-margin-top: 40vh;
-}
-
-#tabla-personas {
-  scroll-margin-top: 40vh;
-}
-
-#tabla-peliculas-cast {
-  scroll-margin-top: 40vh;
-}
-
-#tabla-peliculas-directores {
-  scroll-margin-top: 40vh;
-}
-
->>>>>>> f155c4cbd2e5622ce2679e01fd368600769b1d30

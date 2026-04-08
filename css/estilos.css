@@ -1,0 +1,49 @@
+
+h1 {
+    color: #c8a116;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h2 {
+    color: #c8a116;
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #c8c1c1;
+    background-color: #330514;
+    margin: 0;
+    padding: 20px;
+}
+
+strong {
+    color: #d01f3c;
+}
+
+mark {
+    background-color: #c8a116;
+    color: white;
+    padding: 0 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid #d01f3c;
+    padding: 8px;
+}
+
+nav {
+    padding: 10px;
+    text-align: center;
+}
+
+

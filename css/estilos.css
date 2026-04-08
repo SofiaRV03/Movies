@@ -27,6 +27,10 @@
   --radius:      6px;
   --radius-lg:   12px;
   --transition:  180ms ease;
+  
+  --nav-height:    60px;
+  --nav-height-2:  140px;
+  
 }
 
 /* ── Reset básico ──────────────────────────────────────────── */
@@ -51,6 +55,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: var(--nav-height);
 }
 
 /* ── Tipografía ────────────────────────────────────────────── */
@@ -108,7 +113,7 @@ header {
   padding: 3rem 2rem 2.5rem;
   position: relative;
   overflow: hidden;
-  margin-top: 50px;
+
 }
 
 /* Decoración: raya dorada superior */
@@ -395,16 +400,136 @@ form button[type="submit"]:active {
   border-color: var(--gold-light);
 }
 
-/* ── Responsive ────────────────────────────────────────────── */
-@media (max-width: 600px) {
-  nav ul { flex-direction: column; gap: 0; }
-  nav ul li a { padding: 0.75rem 1rem; }
+@media (min-width: 768px) {
 
-  main { padding: 1.5rem 1rem; }
+  /* Nav — horizontal y compacto */
+  nav ul {
+    flex-direction: row;
+  }
 
-  dl { grid-template-columns: 1fr; }
-  dt { margin-top: 0.5rem; }
+  /* Main — más respiración lateral */
+  main {
+    padding: 3rem 3rem;
+  }
 
-  table { font-size: 0.82rem; }
-  th, td { padding: 0.5rem 0.6rem; }
+  /* Form — horizontal en pantallas medianas */
+  form {
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .form-group {
+    flex: 1;
+    min-width: 220px;
+  }
+
+  form button[type="submit"] {
+    align-self: flex-end;
+  }
+
+  /* Tabla — más padding por columna */
+  th, td {
+    padding: 0.75rem 1.2rem;
+  }
+
+  /* DL — dos columnas */
+  dl {
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1.5rem;
+  }
+
+  /* Details — más padding interno */
+  details > *:not(summary) {
+    padding: 0 1.6rem 1.4rem;
+  }
+
+  summary {
+    padding: 1.1rem 1.6rem;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  /* Body — Posicion de navbar */
+  body {
+    padding-top: var(--nav-height-2);
+  }
+  
+  /* Header — menos padding */
+  header {
+    padding: 2rem 1rem 1.5rem;
+  }
+
+  /* Nav — apilado vertical */
+  nav {
+    padding: 0 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li a {
+    padding: 0.65rem 0.8rem;
+    font-size: 0.82rem;
+  }
+
+  /* Main — márgenes ajustados */
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Form — vertical, full width */
+  form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  form input[type="text"] {
+    font-size: 1rem; /* evita zoom automático en iOS */
+  }
+
+  form button[type="submit"] {
+    width: 100%;
+    text-align: center;
+    align-self: stretch;
+  }
+
+  /* Tabla — scroll horizontal si no cabe */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  th, td {
+    padding: 0.5rem 0.7rem;
+    white-space: nowrap;
+  }
+
+  /* DL — una sola columna */
+  dl {
+    grid-template-columns: 1fr;
+  }
+
+  dt {
+    margin-top: 0.6rem;
+  }
+
+  /* Details — más compacto */
+  summary {
+    padding: 0.85rem 1rem;
+    font-size: 0.92rem;
+  }
+
+  details > *:not(summary) {
+    padding: 0 1rem 1rem;
+  }
+
 }

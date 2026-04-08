@@ -426,6 +426,31 @@ form button[type="submit"]:active {
   scroll-margin-top: 40vh;
 }
 
+/* ── Scrollbar de tablas ─────────────────────────────────────── */
+table::-webkit-scrollbar {
+  height: 6px;
+}
+
+table::-webkit-scrollbar-track {
+  background: var(--surface-2);
+  border-radius: var(--radius);
+}
+
+table::-webkit-scrollbar-thumb {
+  background: var(--gold-dim);
+  border-radius: var(--radius);
+}
+
+table::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* Firefox */
+table {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-dim) var(--surface-2);
+}
+
 
 
 @media (min-width: 768px) {

@@ -105,6 +105,36 @@ hr {
   margin: 2rem 0;
 }
 
+/* ── Carrusel Custom ───────────────────────────────────────── */
+.carousel-img {
+  height: 450px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--border);
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  border-radius: var(--radius-lg);
+  padding: 1rem 2rem;
+  border: 1px solid var(--border);
+}
+
+.carousel-caption h5 {
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
+
+.carousel-caption p {
+  color: var(--cream);
+  margin-bottom: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--gold);
+}
+
 /* ── Header ────────────────────────────────────────────────── */
 header {
   background: var(--surface);

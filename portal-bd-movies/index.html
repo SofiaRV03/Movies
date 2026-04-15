@@ -20,6 +20,48 @@
             <p>Sistema de Gestión de Bases de Datos Cinematográficas</p>
     </header>
 
+    <!-- Carrusel de Bootstrap -->
+    <div id="carouselMovies" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselMovies" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselMovies" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselMovies" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/shawshank.jpg" class="d-block w-100 carousel-img" alt="The Shawshank Redemption">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>The Shawshank Redemption</h5>
+                    <p>Uno de los grandes clásicos del cine en nuestra base de datos.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-block w-100 carousel-img bg-dark d-flex align-items-center justify-content-center">
+                    <i class="bi bi-film text-warning display-1"></i>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Gestión Cinematográfica</h5>
+                    <p>Administra películas, actores y directores eficientemente.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../img/diagrama-bd.png" class="d-block w-100 carousel-img" alt="Diagrama BD">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Estructura de Datos</h5>
+                    <p>Visualiza la organización de nuestra base de datos relacional.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMovies" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselMovies" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
     <nav class="navbar navbar-expand-md fixed-top" style="background-color: var(--surface); border-bottom: 1px solid var(--border);">
         <div class="container">
 

@@ -106,9 +106,14 @@ hr {
 }
 
 /* ── Carrusel Custom ───────────────────────────────────────── */
+.carousel-item {
+  background-color: #000;
+}
+
 .carousel-img {
-  height: 450px;
+  height: 500px;
   object-fit: cover;
+  object-position: top; /* Ajustar para que se vea la parte superior */
   border-bottom: 2px solid var(--border);
 }
 

@@ -21,41 +21,59 @@
     </header>
 
     <!-- Carrusel de Bootstrap -->
-    <div id="carouselMovies" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselMovies" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselMovies" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselMovies" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselMovies" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselMovies" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselMovies" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselMovies" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carouselMovies" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#carouselMovies" data-bs-slide-to="4"></button>
         </div>
         <div class="carousel-inner">
+
             <div class="carousel-item active">
-                <img src="../img/inter.jpg" class="d-block w-100 carousel-img" alt="The Shawshank Redemption">
+                <img src="../img/inter.jpg" class="d-block w-100 carousel-img" alt="Interstellar">
                 <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-badge">⭐ 8.7 IMDB</div>
                     <h5>Interstellar</h5>
-                    <p>Uno de los grandes clásicos del cine en nuestra base de datos.</p>
+                    <p>Un viaje épico más allá de los límites del universo — 2014</p>
                 </div>
             </div>
+
             <div class="carousel-item">
-                <img src="../img/barbie.jpg" class="d-block w-100 carousel-img" alt="The Shawshank Redemption">
+                <img src="../img/barbie.jpg" class="d-block w-100 carousel-img" alt="Barbie">
                 <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-badge">⭐ 6.9 IMDB</div>
                     <h5>Barbie</h5>
-                    <p>Una de las mejores actrices del cine en nuestra base de datos.</p>
+                    <p>La película que lo tuvo todo — 2023</p>
                 </div>
             </div>
+
             <div class="carousel-item">
-                <img src="../img/chihiro.jpg" class="d-block w-100 carousel-img" alt="Chihiro">
+                <img src="../img/chihiro.jpg" class="d-block w-100 carousel-img" alt="El viaje de Chihiro">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Chihiro</h5>
-                    <p>Una de las mejores películas del cine en nuestra base de datos.</p>
+                    <div class="carousel-badge">⭐ 8.6 IMDB</div>
+                    <h5>El Viaje de Chihiro</h5>
+                    <p>La obra maestra de Hayao Miyazaki — 2001</p>
                 </div>
             </div>
+
+            <div class="carousel-item">
+                <img src="../img/shawshank.jpg" class="d-block w-100 carousel-img" alt="The Shawshank Redemption">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-badge">⭐ 9.3 IMDB</div>
+                    <h5>The Shawshank Redemption</h5>
+                    <p>La #1 en IMDB de todos los tiempos — 1994</p>
+                </div>
+            </div>
+
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselMovies" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Anterior</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselMovies" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Siguiente</span>
         </button>
     </div>

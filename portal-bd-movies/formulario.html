@@ -43,17 +43,26 @@
         </div>
     </nav>
     <main class="container">
-        <section aria-labelledby="tit-consulta">
-            <h2 id="tit-consulta">Formulario de Consulta de Películas</h2>
-            <p>Busca películas por el nombre.</p>
-            <form>
-            <div class="form-group">
-                <label for="nombre"><strong>Nombre de la Película:</strong></label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ej: Interstellar" required>
-            </div>
-            <button type="submit"><i class="bi bi-search m-2"></i>Enviar Consulta</button>
-            </form>
+                <section aria-labelledby="tit-consulta" class="fade-in-up">
+            <h2 id="tit-consulta"><i class="bi bi-search me-2" style="color:var(--gold);"></i>Consulta de Películas</h2>
+            <p>Busca cualquier película de nuestro catálogo por su nombre.</p>
 
+            <div class="form-card">
+                <div class="form-card-icon-wrap">
+                    <i class="bi bi-film"></i>
+                </div>
+                <h3 class="form-card-title">Buscar en el catálogo</h3>
+                <form class="form-card-body">
+                    <div class="form-group">
+                        <label for="nombre">Nombre de la Película</label>
+                        <div class="input-icon-wrap">
+                            <i class="bi bi-search"></i>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej: Interstellar, Barbie, Chihiro..." required>
+                        </div>
+                    </div>
+                    <button type="submit"><i class="bi bi-search me-2"></i>Enviar Consulta</button>
+                </form>
+            </div>
             <hr>
         </section>
         <section aria-labelledby="tit-trailer">

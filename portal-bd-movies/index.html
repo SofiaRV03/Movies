@@ -211,6 +211,59 @@
             </table>
         </section>
 
+        <section aria-labelledby="contacto-titulo" class="contacto-section">
+            <div class="contacto-bg">
+                <img src="../img/minecraft.png" alt="" class="contacto-bg-img" aria-hidden="true">
+                <div class="contacto-overlay"></div>
+
+                <div class="contacto-inner">
+                    
+
+                    <div class="form-card contacto-card">
+
+                        <h2 id="contacto-titulo">
+                            <i class="bi bi-envelope me-2" style="color:var(--gold);"></i>Contacto
+                        </h2>
+                    <p>¿Tienes sugerencias o quieres reportar un error en el catálogo? Escríbenos.</p>
+
+                        
+                        <h3 class="form-card-title">Envíanos un mensaje</h3>
+                        <form class="form-card-body">
+                            <div class="form-group">
+                                <label for="contacto-nombre">Nombre</label>
+                                <div class="input-icon-wrap">
+                                    <i class="bi bi-person"></i>
+                                    <input type="text" id="contacto-nombre" name="nombre"
+                                        placeholder="Ej: Laura Gómez" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contacto-email">Correo electrónico</label>
+                                <div class="input-icon-wrap">
+                                    <i class="bi bi-envelope"></i>
+                                    <input type="email" id="contacto-email" name="email"
+                                        placeholder="Ej: laura@correo.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contacto-mensaje">Mensaje</label>
+                                <div class="input-icon-wrap">
+                                    <i class="bi bi-pencil" style="top:1rem; transform:none;"></i>
+                                    <textarea id="contacto-mensaje" name="mensaje" rows="4"
+                                        placeholder="Escribe tu mensaje aquí..." required
+                                        style="padding-top:0.65rem; resize:vertical;"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit">
+                                <i class="bi bi-send me-2"></i>Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </section>
+
     </main>
 
     <footer>
@@ -228,5 +281,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

@@ -25,7 +25,6 @@ bienvenida = "Explora y gestiona información sobre películas, actores, directo
 
 let definicion = "Movix es una plataforma para administrar información cinematográfica, permitiendo registrar, consultar y analizar datos de películas, actores, directores y géneros."
 
-// Imprimir en consola
 
 console.log("Nombre de la pagina: ", NOMBRE_MOVIX);
 console.log("Descripcion de ",NOMBRE_MOVIX, ": ",DESCRIPCION_MOVIX);

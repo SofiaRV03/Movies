@@ -118,24 +118,60 @@ const peliculas = [
 /*------------------------------------------------------------------*/
 const formRecomendador = document.getElementById("form-recomendador");
 
-formRecomendador.addEventListener("submit", function(e) {
-    e.preventDefault();
+if (formRecomendador) {
+    formRecomendador.addEventListener("submit", function(e) {
+        e.preventDefault();
 
-    const input = document.getElementById("nombre").value.toLowerCase();
-    const resultado = document.getElementById("resultado");
+        const input = document.getElementById("nombre").value.toLowerCase();
+        const resultado = document.getElementById("resultado");
 
-    const peli = peliculas.find(p =>
-        p.titulo.toLowerCase().includes(input) ||
-        p.genero.includes(input)
-    );
+        const peli = peliculas.find(p =>
+            p.titulo.toLowerCase().includes(input) ||
+            p.genero.includes(input)
+        );
 
-    if (peli) {
-        resultado.innerHTML = `
-            🎬 <strong>${peli.titulo}</strong><br>
-            ${peli.descripcion}
-        `;
-    } else {
-        resultado.innerHTML = "❌ No encontramos una Pelicula o recomendación";
-    }
-});
+        if (peli) {
+            resultado.innerHTML = `
+                🎬 <strong>${peli.titulo}</strong><br>
+                ${peli.descripcion}
+            `;
+        } else {
+            resultado.innerHTML = "❌ No encontramos una película o recomendación";
+        }
+    });
+}
 console.log("ACTIVO");
+
+// MODO OSCURO / CLARO
+
+const btnTheme = document.getElementById("toggle-theme");
+
+// Aplicar tema guardado al cargar
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "light") {
+    document.body.classList.add("light-mode");
+}
+
+if (btnTheme) {
+
+    // Ajustar icono inicial
+    if (document.body.classList.contains("light-mode")) {
+        btnTheme.textContent = "🌙";
+    } else {
+        btnTheme.textContent = "☀️";
+    }
+
+    // Evento click
+    btnTheme.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+
+        if (document.body.classList.contains("light-mode")) {
+            btnTheme.textContent = "🌙";
+            localStorage.setItem("theme", "light");
+        } else {
+            btnTheme.textContent = "☀️";
+            localStorage.setItem("theme", "dark");
+        }
+    });
+}

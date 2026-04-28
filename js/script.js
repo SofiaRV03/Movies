@@ -73,4 +73,20 @@ form.addEventListener("submit", function(e) {
 })
 
 
+// ANIMACIÓN SCROLL CONTACTO
+const elementosAnimados = document.querySelectorAll(".animar");
 
+function mostrarElementos() {
+    elementosAnimados.forEach(el => {
+        const rect = el.getBoundingClientRect();
+
+        if (rect.top < window.innerHeight - 100) {
+            el.classList.add("visible");
+        }
+    });
+}
+
+window.addEventListener("scroll", mostrarElementos);
+
+// Ejecutar al cargar
+mostrarElementos();

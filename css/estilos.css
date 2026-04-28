@@ -586,6 +586,10 @@ table {
   border-color: rgba(201, 168, 76, 0.25) !important;
   max-width: 650px;
   width: 100%;
+  box-shadow: 
+  0 0 10px rgba(201,168,76,0.2),
+  0 0 30px rgba(201,168,76,0.15),
+  0 10px 40px rgba(0,0,0,0.6);
 }
 
 .contacto-card label {
@@ -594,4 +598,22 @@ table {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 
+}
+/*animacion scroll contacto*/
+.animar {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.animar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* efecto pro al pasar el mouse */
+.contacto-card:hover {
+  box-shadow: 0 15px 50px rgba(201,168,76,0.2);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
 }

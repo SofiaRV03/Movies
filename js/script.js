@@ -47,8 +47,9 @@ function esEmailValido(email) {
 // Conexion y validacion con el formulario contacto
 const form = document.getElementById("form-contacto");
 
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
+if (form) {
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
     const nombre = document.getElementById("contacto-nombre").value;
     const email = document.getElementById("contacto-email").value;
     const mensaje = document.getElementById("contacto-mensaje").value;
@@ -70,7 +71,7 @@ form.addEventListener("submit", function(e) {
     } else {
         alert("El formulario no fue enviado")
     }
-})
+})}
 
 
 // ANIMACIÓN SCROLL CONTACTO
@@ -90,3 +91,51 @@ window.addEventListener("scroll", mostrarElementos);
 
 // Ejecutar al cargar
 mostrarElementos();
+
+/*----------------------Recomendacion de peliculas (base datos prueba)---------------------------------*/
+const peliculas = [
+    {
+        titulo: "Interstellar",
+        genero: "ciencia ficcion",
+        descripcion: "Viaje espacial y agujeros de gusano"
+    },
+    {
+        titulo: "Barbie",
+        genero: "comedia",
+        descripcion: "Una aventura divertida en el mundo de Barbie"
+    },
+    {
+        titulo: "El viaje de Chihiro",
+        genero: "animacion",
+        descripcion: "Una niña en un mundo espiritual mágico"
+    },
+    {
+        titulo: "The Shawshank Redemption",
+        genero: "drama",
+        descripcion: "Historia de esperanza en prisión"
+    }
+];
+/*------------------------------------------------------------------*/
+const formRecomendador = document.getElementById("form-recomendador");
+
+formRecomendador.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const input = document.getElementById("nombre").value.toLowerCase();
+    const resultado = document.getElementById("resultado");
+
+    const peli = peliculas.find(p =>
+        p.titulo.toLowerCase().includes(input) ||
+        p.genero.includes(input)
+    );
+
+    if (peli) {
+        resultado.innerHTML = `
+            🎬 <strong>${peli.titulo}</strong><br>
+            ${peli.descripcion}
+        `;
+    } else {
+        resultado.innerHTML = "❌ No encontramos una Pelicula o recomendación";
+    }
+});
+console.log("ACTIVO");

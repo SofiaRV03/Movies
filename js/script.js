@@ -92,30 +92,19 @@ window.addEventListener("scroll", mostrarElementos);
 // Ejecutar al cargar
 mostrarElementos();
 
-/*----------------------Recomendacion de peliculas (base datos prueba)---------------------------------*/
-const peliculas = [
-    {
-        titulo: "Interstellar",
-        genero: "ciencia ficcion",
-        descripcion: "Viaje espacial y agujeros de gusano"
-    },
-    {
-        titulo: "Barbie",
-        genero: "comedia",
-        descripcion: "Una aventura divertida en el mundo de Barbie"
-    },
-    {
-        titulo: "El viaje de Chihiro",
-        genero: "animacion",
-        descripcion: "Una niña en un mundo espiritual mágico"
-    },
-    {
-        titulo: "The Shawshank Redemption",
-        genero: "drama",
-        descripcion: "Historia de esperanza en prisión"
-    }
-];
-/*------------------------------------------------------------------*/
+/*----------------Recomendacion de peliculas (base datos real en peliculas.json)---------------*/
+console.log("JavaScript conectado correctamente");
+
+//cargar peliculas desde JSON
+let peliculas = [];
+fetch("../js/peliculas.json")
+    .then(response => response.json())
+    .then(data => {
+        peliculas = data;
+        console.log("🎬 Películas cargadas:", peliculas);
+    })
+    .catch(error => console.error("❌ Error cargando JSON:", error));
+/*-------------------------formulario recomendador ---------------------------*/
 const formRecomendador = document.getElementById("form-recomendador");
 
 if (formRecomendador) {
@@ -125,22 +114,38 @@ if (formRecomendador) {
         const input = document.getElementById("nombre").value.toLowerCase();
         const resultado = document.getElementById("resultado");
 
+        if (peliculas.length === 0) {
+            resultado.innerHTML = "⏳ Cargando películas...";
+            return;
+        }
+
         const peli = peliculas.find(p =>
-            p.titulo.toLowerCase().includes(input) ||
-            p.genero.includes(input)
+            (p.title && p.title.toLowerCase().includes(input)) ||
+            (p.year && p.year.toString().includes(input)) ||
+            (p.genres && p.genres.join().toLowerCase().includes(input))
         );
 
         if (peli) {
             resultado.innerHTML = `
-                🎬 <strong>${peli.titulo}</strong><br>
-                ${peli.descripcion}
-            `;
+            <div style="margin-top:1rem;">
+                <img src="${peli.poster_url}" 
+                    alt="${peli.title}" 
+                    style="width:150px; border-radius:8px; margin-bottom:10px; box-shadow:0 5px 15px rgba(0,0,0,0.5);">
+                
+                <p>
+                    🎬 <strong>${peli.title}</strong><br>
+                    📅 Año: ${peli.year || "No disponible"}<br>
+                    ⭐ IMDB: ${peli.imdb_rating || "N/A"}<br>
+                    📝 ${peli.overview || "Sin descripción"}
+                </p>
+            </div>
+        `;
         } else {
-            resultado.innerHTML = "❌ No encontramos una película o recomendación";
+            resultado.innerHTML = "❌ No encontramos esa película";
         }
     });
 }
-console.log("ACTIVO");
+
 
 // MODO OSCURO / CLARO
 

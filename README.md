@@ -55,9 +55,9 @@ Movies/
 │   └── estilos.css         # Hoja de estilos principal
 ├── img/                    # Imágenes, pósters y diagramas
 │   └── diagrama-bd.png     # Modelo relacional de la base de datos
-├── js/      
-│   ├── peliculas.json    # Interfaz de registro y consultas
-│   └── script.js               # Scripts del sistema         # Lógica JS (validaciones, interacciones)
+├── js/                     # Lógica JS (validaciones, interacciones)
+│   ├── peliculas.json      # base de datos en json
+│   └── script.js           # Scripts del sistema         
 ├── portal-bd-movies/       # Páginas principales del sistema
 │   ├── index.html          # Landing page y presentación
 │   ├── formulario.html     # Interfaz de registro y consultas
